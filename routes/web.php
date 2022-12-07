@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\File;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,5 +21,8 @@ Route::get('/storage/{extra}', function ($extra) {
     return redirect('/public/storage/$extra');
 })->where('extra', '.*');
 Route::get('/link', function () {
-    Artisan::call('storage:link');
+    File::link(
+        storage_path('app/public'),
+        public_path('storage')
+    );
 });
