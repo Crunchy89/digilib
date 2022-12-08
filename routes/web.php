@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\File;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,13 +15,4 @@ use Illuminate\Support\Facades\File;
 
 Route::get('/', function () {
     return view('welcome');
-});
-Route::get('/storage/{extra}', function ($extra) {
-    return redirect('/public/storage/$extra');
-})->where('extra', '.*');
-Route::get('/link', function () {
-    File::link(
-        storage_path('app/public'),
-        public_path('storage')
-    );
 });
