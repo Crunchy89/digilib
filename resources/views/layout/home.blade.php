@@ -46,19 +46,19 @@
                   <div class="d-flex  flex-column flex-lg-row align-items-center">
                     <ul class="navbar-nav  ">
                       <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="index.html">Beranda <span class="sr-only">(current)</span></a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="about.html">About </a>
+                        <a class="nav-link" href="about.html">Tentang</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="service.html">Services </a>
+                        <a class="nav-link" href="service.html">Repository </a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="contact.html">Katalog</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#"> Login</a>
+                        <a class="nav-link" href="#"> Masuk</a>
                       </li>
                     </ul>
                     <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
@@ -87,17 +87,16 @@
                   <div class="col-lg-5 col-md-6">
                     <div class="slider_detail-box">
                       <h1>
-                        Start <br/>
-                        Business with <br/>
-                        Our Company
+                        Selamat datang <br/>
+                        Digilib <br/>
+                        STMIK Lombok
                       </h1>
                       <p>
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi
+                        Gali dan tingkatkan pengetahuanmu bersama kami
                       </p>
                       <div class="btn-box">
                         <a href="" class="btn-1">
-                          Read More
+                          Baca Selengkapnya
                         </a>
                       </div>
                     </div>
@@ -113,24 +112,23 @@
             <div class="carousel-item">
               <div class="container">
                 <div class="row">
-                  <div class="col-lg-5 col-md-6">
-                    <div class="slider_detail-box">
-                      <h1>
-                        Start <br/>
-                        Business with <br/>
-                        Our Company
-                      </h1>
-                      <p>
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi
-                      </p>
-                      <div class="btn-box">
-                        <a href="" class="btn-1">
-                          Read More
-                        </a>
+                    <div class="col-lg-5 col-md-6">
+                        <div class="slider_detail-box">
+                          <h1>
+                            Selamat datang <br/>
+                            Digilib <br/>
+                            STMIK Lombok
+                          </h1>
+                          <p>
+                            Gali dan tingkatkan pengetahuanmu bersama kami
+                          </p>
+                          <div class="btn-box">
+                            <a href="" class="btn-1">
+                              Baca Selengkapnya
+                            </a>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
                   <div class="col-md-6">
                     <div class="slider_img-box">
                       <img src="{{asset("assets/images/slider-img.png")}}" alt=""/>
@@ -142,24 +140,23 @@
             <div class="carousel-item">
               <div class="container">
                 <div class="row">
-                  <div class="col-lg-5 col-md-6">
-                    <div class="slider_detail-box">
-                      <h1>
-                        Start <br/>
-                        Business with <br/>
-                        Our Company
-                      </h1>
-                      <p>
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi
-                      </p>
-                      <div class="btn-box">
-                        <a href="" class="btn-1">
-                          Read More
-                        </a>
+                    <div class="col-lg-5 col-md-6">
+                        <div class="slider_detail-box">
+                          <h1>
+                            Selamat datang <br/>
+                            Digilib <br/>
+                            STMIK Lombok
+                          </h1>
+                          <p>
+                            Gali dan tingkatkan pengetahuanmu bersama kami
+                          </p>
+                          <div class="btn-box">
+                            <a href="" class="btn-1">
+                              Baca Selengkapnya
+                            </a>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
                   <div class="col-md-6">
                     <div class="slider_img-box">
                       <img src="{{asset("assets/images/slider-img.png")}}" alt=""/>
@@ -171,10 +168,10 @@
           </div>
           <div class="carousel_btn-container">
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-              <span class="sr-only">Previous</span>
+              <span class="sr-only">Sebelumnya</span>
             </a>
             <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-              <span class="sr-only">Next</span>
+              <span class="sr-only">Selanjutnya</span>
             </a>
           </div>
         </div>
@@ -187,7 +184,7 @@
       <div class="container">
         <div class="custom_heading-container">
           <h2>
-            Welcome To Our Company
+            Selamat datang di Perpustakaan online kami
           </h2>
         </div>
         <div class="layout_padding2">
@@ -204,7 +201,7 @@
             </p>
             <div>
               <a href="">
-                Read More
+                Baca Selengkapnya
               </a>
             </div>
           </div>
@@ -220,7 +217,7 @@
       <div class="container">
         <div class="custom_heading-container">
           <h2>
-            Our Services
+            Mau cari apa ?
           </h2>
         </div>
         <div class="service_container layout_padding2">
@@ -230,12 +227,10 @@
             </div>
             <div class="detail-box">
               <h4>
-                Business <br/>
-                Consultant
+                E-Book
               </h4>
               <p>
-                have suffered alteration in some form, by injected humour, or randomised words which don&#39;t look even
-                slightly believable. If you are
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit harum, minima laudantium cumque quos delectus quas dolor error quidem exercitationem. Corrupti suscipit officiis doloremque neque, eaque quidem dicta odit optio.
               </p>
             </div>
           </div>
@@ -245,12 +240,10 @@
             </div>
             <div class="detail-box">
               <h4>
-                Marketing <br/>
-                Analytics
+                Jurnal
               </h4>
               <p>
-                have suffered alteration in some form, by injected humour, or randomised words which don&#39;t look even
-                slightly believable. If you are
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab suscipit, ut nulla nesciunt et officiis accusantium possimus doloremque aliquid dolorem temporibus voluptatum? Libero labore at distinctio non dolore blanditiis adipisci.
               </p>
             </div>
           </div>
@@ -260,19 +253,17 @@
             </div>
             <div class="detail-box">
               <h4>
-                Financial <br/>
-                Planning
+                Karya Ilmiah
               </h4>
               <p>
-                have suffered alteration in some form, by injected humour, or randomised words which don&#39;t look even
-                slightly believable. If you are
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate perferendis tempore doloremque quaerat aliquam. Vitae vel assumenda atque repellendus minima repellat qui molestiae tenetur iste, hic consequatur sapiente non optio.
               </p>
             </div>
           </div>
         </div>
         <div>
           <a href="">
-            Read More
+            Baca Selengkapnya
           </a>
         </div>
       </div>
@@ -284,7 +275,7 @@
       <div class="container">
         <div class="custom_heading-container">
           <h2>
-            Do you have any business problem ?
+            Punya masalah dalam menuntut ilmu ?
           </h2>
         </div>
         <div class="layout_padding2">
@@ -293,12 +284,11 @@
           </div>
           <div class="detail-box">
             <p>
-              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in
-              some form, by injected humour, or randomised words which don&#39;t look even slightly believable. I
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quo perferendis quia perspiciatis aut quos molestiae repellat beatae sapiente soluta inventore porro officiis rem nam hic alias similique, iure optio.
             </p>
             <div>
               <a href="">
-                Read More
+                Baca Selengkapnya
               </a>
             </div>
           </div>
@@ -313,7 +303,7 @@
       <div class="container">
         <div class="custom_heading-container">
           <h2>
-            Why Choose Us
+            Digilib
           </h2>
         </div>
         <div class="content-container">
@@ -328,10 +318,10 @@
               </div>
               <div class="detail-box">
                 <h3>
-                  99%
+                  1000
                 </h3>
                 <h6>
-                  SATISFIED CLIENTS
+                  Alumni
                 </h6>
               </div>
             </div>
@@ -341,10 +331,10 @@
               </div>
               <div class="detail-box">
                 <h3>
-                  4700+
+                  2
                 </h3>
                 <h6>
-                  AWESOME planing
+                  Laboratorium
                 </h6>
               </div>
             </div>
@@ -357,7 +347,7 @@
                   4500+
                 </h3>
                 <h6>
-                  CLIENTS
+                  Mahasiswa
                 </h6>
               </div>
             </div>
@@ -367,10 +357,10 @@
               </div>
               <div class="detail-box">
                 <h3>
-                  19000+
+                  Rp. 1.000.000,00
                 </h3>
                 <h6>
-                  DAILY business
+                  Biaya Kuliah Termurah
                 </h6>
               </div>
             </div>
@@ -386,7 +376,7 @@
     <section class="client_section layout_padding">
       <div class="container">
         <h2>
-          What Our Clients Says
+          Prakata
         </h2>
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
@@ -470,10 +460,10 @@
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span class="sr-only">Previous</span>
+            <span class="sr-only">Sebelumnya</span>
           </a>
           <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span class="sr-only">Next</span>
+            <span class="sr-only">Selanjutnya</span>
           </a>
         </div>
 
@@ -484,7 +474,7 @@
     <section class="contact_section layout_padding">
       <div class="container contact_heading">
         <h2>
-          Contact Us
+          Hubungi Kami
         </h2>
         <p>
           psum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -494,7 +484,7 @@
         <form>
           <div class="form-row">
             <div class="form-group col-md-6">
-              <label for="inputName4">Name</label>
+              <label for="inputName4">Nama</label>
               <input type="text" class="form-control" id="inputName4"/>
             </div>
             <div class="form-group col-md-6">
@@ -505,26 +495,19 @@
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
-              <label for="inputNumber4">Phone number</label>
+              <label for="inputNumber4">Nomor Telepon</label>
               <input type="tel" class="form-control" id="inputNumber4"/>
-            </div>
-            <div class="form-group col-md-6">
-              <label for="inputState">Select Service</label>
-              <select id="inputState" class="form-control">
-                <option selected=""></option>
-                <option>...</option>
-              </select>
             </div>
 
           </div>
           <div class="form-group">
-            <label for="inputMessage">Message</label>
+            <label for="inputMessage">Pesan</label>
             <input type="text" class="form-control" id="inputMessage" placeholder=""/>
           </div>
       </div>
 
       <div class="d-flex justify-content-center">
-        <button type="submit" class="">Send</button>
+        <button type="submit" class="">Kirim</button>
       </div>
       </form>
 
@@ -537,7 +520,7 @@
       <section class="info_section layout_padding2-bottom">
         <div class="container">
           <h3 class="">
-            BigWing
+            Digilib
           </h3>
         </div>
         <div class="container info_content">
@@ -547,34 +530,34 @@
               <div class="col-md-6 col-lg-4">
                 <div class="d-flex">
                   <h5>
-                    Useful Link
+                    Link
                   </h5>
                 </div>
                 <div class="d-flex ">
                   <ul>
                     <li>
                       <a href="">
-                        About Us
+                        Tentang Kami
                       </a>
                     </li>
                     <li>
                       <a href="">
-                        About services
+                        Jurusan
                       </a>
                     </li>
                     <li>
                       <a href="">
-                        About Departments
+                        Laboratorium
                       </a>
                     </li>
                     <li>
                       <a href="">
-                        Services
+                        Alumni
                       </a>
                     </li>
                     <li>
                       <a href="">
-                        Contact Us
+                        Hubungi Kami
                       </a>
                     </li>
                   </ul>
