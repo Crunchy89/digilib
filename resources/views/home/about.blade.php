@@ -13,7 +13,7 @@
       </div>
       <div class="layout_padding2">
         <div class="img-box">
-          <img src="images/welcome.png" alt=""/>
+          <img src="{{asset("assets")}}/images/welcome.png" alt=""/>
         </div>
         <div class="detail-box">
           <p>
