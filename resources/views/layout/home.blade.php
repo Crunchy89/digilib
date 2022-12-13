@@ -72,10 +72,9 @@
         </div>
       </header>
       <!-- end header section -->
+      @yield("slider")
     </div>
-
-
-      @yield("body")
+    @yield("body")
 
     <!-- end contact section -->
     <div class="footer_bg">
@@ -331,4 +330,5 @@
 
 
 
-  </body></html>
+    </body>
+  </html>

@@ -1,19 +1,46 @@
 @extends("welcome")
 
-@section("body")
-    <!-- slider section -->
-    <section class=" slider_section ">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">01</li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1">02</li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2">03</li>
-          </ol>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="container">
-                <div class="row">
-                  <div class="col-lg-5 col-md-6">
+@section("slider")
+<section class=" slider_section ">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">01</li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1">02</li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2">03</li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-5 col-md-6">
+                <div class="slider_detail-box">
+                  <h1>
+                    Selamat datang <br/>
+                    Digilib <br/>
+                    STMIK Lombok
+                  </h1>
+                  <p>
+                    Gali dan tingkatkan pengetahuanmu bersama kami
+                  </p>
+                  <div class="btn-box">
+                    <a href="" class="btn-1">
+                      Baca Selengkapnya
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="slider_img-box">
+                  <img src="{{asset("assets/images/slider-img.png")}}" alt=""/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-6">
                     <div class="slider_detail-box">
                       <h1>
                         Selamat datang <br/>
@@ -30,83 +57,59 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-6">
-                    <div class="slider_img-box">
-                      <img src="{{asset("assets/images/slider-img.png")}}" alt=""/>
-                    </div>
-                  </div>
+              <div class="col-md-6">
+                <div class="slider_img-box">
+                  <img src="{{asset("assets/images/slider-img.png")}}" alt=""/>
                 </div>
               </div>
             </div>
-            <div class="carousel-item">
-              <div class="container">
-                <div class="row">
-                    <div class="col-lg-5 col-md-6">
-                        <div class="slider_detail-box">
-                          <h1>
-                            Selamat datang <br/>
-                            Digilib <br/>
-                            STMIK Lombok
-                          </h1>
-                          <p>
-                            Gali dan tingkatkan pengetahuanmu bersama kami
-                          </p>
-                          <div class="btn-box">
-                            <a href="" class="btn-1">
-                              Baca Selengkapnya
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                  <div class="col-md-6">
-                    <div class="slider_img-box">
-                      <img src="{{asset("assets/images/slider-img.png")}}" alt=""/>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="container">
-                <div class="row">
-                    <div class="col-lg-5 col-md-6">
-                        <div class="slider_detail-box">
-                          <h1>
-                            Selamat datang <br/>
-                            Digilib <br/>
-                            STMIK Lombok
-                          </h1>
-                          <p>
-                            Gali dan tingkatkan pengetahuanmu bersama kami
-                          </p>
-                          <div class="btn-box">
-                            <a href="" class="btn-1">
-                              Baca Selengkapnya
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                  <div class="col-md-6">
-                    <div class="slider_img-box">
-                      <img src="{{asset("assets/images/slider-img.png")}}" alt=""/>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel_btn-container">
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-              <span class="sr-only">Sebelumnya</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-              <span class="sr-only">Selanjutnya</span>
-            </a>
           </div>
         </div>
-      </section>
-      <!-- end slider section -->
+        <div class="carousel-item">
+          <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-6">
+                    <div class="slider_detail-box">
+                      <h1>
+                        Selamat datang <br/>
+                        Digilib <br/>
+                        STMIK Lombok
+                      </h1>
+                      <p>
+                        Gali dan tingkatkan pengetahuanmu bersama kami
+                      </p>
+                      <div class="btn-box">
+                        <a href="" class="btn-1">
+                          Baca Selengkapnya
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+              <div class="col-md-6">
+                <div class="slider_img-box">
+                  <img src="{{asset("assets/images/slider-img.png")}}" alt=""/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel_btn-container">
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="sr-only">Sebelumnya</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="sr-only">Selanjutnya</span>
+        </a>
+      </div>
     </div>
+  </section>
+@endsection
+@section("body")
+    <!-- slider section -->
+
+      <!-- end slider section -->
+
 
     <!-- welcome section -->
     <section class="welcome_section layout_padding">
