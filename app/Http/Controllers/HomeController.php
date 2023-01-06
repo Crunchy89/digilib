@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Repository;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -14,10 +15,11 @@ class HomeController extends Controller
     public function index()
     {
         //
+        $subpage = false;
         $data = [
             "subpage" => false
         ];
-        return view("home.index", $data);
+        return view("home.index", compact('subpage'));
     }
 
     /**

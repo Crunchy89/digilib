@@ -445,3 +445,12 @@
 
     </section>
 @endsection
+
+@section("script")
+<script>
+    $(document).ready(async function(){
+        const repo = await getData('{{route("getRepository")}}');
+        console.log(repo)
+    })
+</script>
+@endsection
