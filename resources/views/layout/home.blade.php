@@ -45,16 +45,16 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <div class="d-flex  flex-column flex-lg-row align-items-center">
                     <ul class="navbar-nav  ">
-                      <li class="nav-item active">
+                      <li class="nav-item @if($menu === "home")active @endif">
                         <a class="nav-link" href="{{route("home")}}">Beranda <span class="sr-only">(current)</span></a>
                       </li>
-                      <li class="nav-item">
+                      <li class="nav-item @if($menu === "about")active @endif">
                         <a class="nav-link" href="{{route("home.about")}}">Tentang</a>
                       </li>
-                      <li class="nav-item">
+                      <li class="nav-item @if($menu === "repository")active @endif">
                         <a class="nav-link" href="{{route("home.repository")}}">Repository </a>
                       </li>
-                      <li class="nav-item">
+                      <li class="nav-item @if($menu === "katalog")active @endif">
                         <a class="nav-link" href="{{route("home.katalog")}}">Katalog</a>
                       </li>
                       <li class="nav-item">

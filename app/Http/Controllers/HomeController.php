@@ -16,10 +16,8 @@ class HomeController extends Controller
     {
         //
         $subpage = false;
-        $data = [
-            "subpage" => false
-        ];
-        return view("home.index", compact('subpage'));
+        $menu = "active";
+        return view("home.index", compact('subpage', "menu"));
     }
 
     /**

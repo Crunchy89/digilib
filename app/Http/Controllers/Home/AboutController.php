@@ -10,10 +10,9 @@ class AboutController extends Controller
     //
     public function index()
     {
-        //
-        $data = [
-            "subpage" => true
-        ];
-        return view("home.about", $data);
+
+        $subpage = true;
+        $menu = "about";
+        return view("home.about", compact("subpage", "menu"));
     }
 }
