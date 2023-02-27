@@ -22,3 +22,11 @@
       </p>
     </a>
   </li>
+  <li class="nav-item">
+    <a href="{{ route("admin.repository") }}" class="nav-link {{$active == "repository" ? "active" : null }}">
+      <i class="nav-icon fas fa-th"></i>
+      <p>
+        Repository
+      </p>
+    </a>
+  </li>

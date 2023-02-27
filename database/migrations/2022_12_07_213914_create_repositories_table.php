@@ -17,10 +17,10 @@ class CreateRepositoriesTable extends Migration
             $table->id();
             $table->string("uuid")->unique();
             $table->string("nim")->unique();
-            $table->string("judul");
-            $table->string("cover");
-            $table->string("file");
-            $table->string("file_demo");
+            $table->string("judul")->unique();
+            $table->string("cover")->comment("cover skripsi");
+            $table->string("file")->comment("file skripsi berbentuk pdf");
+            $table->string("file_demo")->comment("file skripsi untuk demo");
             $table->string("slug")->unique();
             $table->timestamps();
         });

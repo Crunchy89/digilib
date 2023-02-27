@@ -20,10 +20,10 @@ class Repository extends Model
         parent::boot();
         static::creating(function ($model) {
             $model->uuid = Uuid::uuid4()->toString();
+            $model->slug = Str::slug($model->judul);
         });
-    }
-    public function setSlugAttribute()
-    {
-        $this->attributes["slug"] = Str::slug($this->attributes["judul"]);
+        static::updating(function ($model) {
+            $model->slug = Str::slug($model->judul);
+        });
     }
 }

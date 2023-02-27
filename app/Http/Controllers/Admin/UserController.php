@@ -8,8 +8,7 @@ use App\Model\Role;
 use App\Model\User;
 use Exception;
 use Illuminate\Http\Request;
-use DataTables;
-use Illuminate\Support\Facades\Validator;
+use Yajra\DataTables\Facades\DataTables;
 
 class UserController extends Controller
 {

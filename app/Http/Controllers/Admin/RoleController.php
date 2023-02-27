@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Model\Role;
 use Exception;
 use Illuminate\Http\Request;
-use DataTables;
+use Yajra\DataTables\Facades\DataTables;
 
 class RoleController extends Controller
 {

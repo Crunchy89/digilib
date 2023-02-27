@@ -9,14 +9,12 @@ use Ramsey\Uuid\Uuid;
 
 class Files
 {
-    public static function move(string $name, string $path)
+    public static function move($file, string $path)
     {
         try {
-            $request = new Request();
-            $file = $request->file($name);
             $filename = Uuid::uuid4()->toString();
             $file->move($path, $filename);
-            return $filename;
+            return $path . "/" . $filename;
         } catch (Exception $e) {
             dd($e);
             return "";

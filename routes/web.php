@@ -31,4 +31,10 @@ Route::prefix('admin')->group(function () {
         Route::get("/single/{uuid}", "Admin\UserController@getById")->name("admin.user.id");
         Route::post("/aksi", "Admin\UserController@aksi")->name("admin.user.aksi");
     });
+    Route::prefix('repository')->group(function () {
+        Route::get("/", "Admin\RepositoryController@index")->name("admin.repository");
+        Route::get("/datatables", "Admin\RepositoryController@datatable")->name("admin.repository.datatable");
+        Route::get("/single/{uuid}", "Admin\RepositoryController@getById")->name("admin.repository.id");
+        Route::post("/aksi", "Admin\RepositoryController@aksi")->name("admin.repository.aksi");
+    });
 });
