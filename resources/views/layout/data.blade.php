@@ -107,13 +107,13 @@
           $('#modal').modal('show');
         })
         $("#form").submit(async function (e) {
-    e.preventDefault();
-    let urlAksi = $(this).data("url");
-    let dataSend = new FormData(this);
-    const response = await postData(urlAksi,dataSend);
-        table.ajax.reload();
-        $("#modal").modal("hide");
-        toastr["success"](response);
+            e.preventDefault();
+            const urlAksi = $(this).data("url");
+            const dataSend = new FormData(this);
+            const response = await postData(urlAksi,dataSend);
+            table.ajax.reload();
+            $("#modal").modal("hide");
+            toastr["success"](response.toString());
   });
     })
 </script>

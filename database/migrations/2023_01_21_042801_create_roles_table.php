@@ -15,6 +15,7 @@ class CreateRolesTable extends Migration
     {
         Schema::create('role', function (Blueprint $table) {
             $table->id();
+            $table->string("uuid")->unique();
             $table->string("role")->unique()->comment("field nama role");
             $table->timestamps();
         });

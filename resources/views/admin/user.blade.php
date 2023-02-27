@@ -15,11 +15,11 @@
     <input type="password" name="password" id="password" class="form-control">
 </div>
     <div class="form-group">
-        <label for="role_id">Role</label>
-        <select name="role_id" id="role_id" class="form-control">
+        <label for="role_uuid">Role</label>
+        <select name="role_uuid" id="role_uuid" class="form-control">
             <option value="">Pilih Role</option>
             @foreach ($role as $data)
-                <option value="{{$data->id}}">{{$data->role}}</option>
+                <option value="{{$data->uuid}}">{{$data->role}}</option>
             @endforeach
         </select>
     </div>
@@ -40,8 +40,8 @@ table = $('#table').DataTable({
 @endsection
 
 @section("edit-data")
-$('#id').val(data.id);
+$('#id').val(data.uuid);
 $('#username').attr("disabled",true);
 $('#username').val(data.username);
-$('#role_id').val(data.role_id);
+$('#role_uuid').val(data.role_uuid);
 @endsection

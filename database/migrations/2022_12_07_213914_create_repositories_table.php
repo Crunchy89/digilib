@@ -15,9 +15,13 @@ class CreateRepositoriesTable extends Migration
     {
         Schema::create('repository', function (Blueprint $table) {
             $table->id();
+            $table->string("uuid")->unique();
             $table->string("nim")->unique();
+            $table->string("judul");
             $table->string("cover");
             $table->string("file");
+            $table->string("file_demo");
+            $table->string("slug")->unique();
             $table->timestamps();
         });
     }

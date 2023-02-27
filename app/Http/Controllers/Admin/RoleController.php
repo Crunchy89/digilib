@@ -21,10 +21,10 @@ class RoleController extends Controller
         return view("admin.role", compact("active", "title", "url", "aksi", "th"));
     }
 
-    public function getById(Request $request, $id)
+    public function getById(string $uuid)
     {
         try {
-            $role = Role::find($id);
+            $role = Role::where("uuid", $uuid)->first();
             return Response::success($role, 200);
         } catch (Exception $e) {
             return Response::error("data tidak ditemukan", 404);
@@ -36,9 +36,9 @@ class RoleController extends Controller
         return DataTables::of(Role::all())
             ->addIndexColumn()
             ->addColumn('action', function ($row) {
-                $url = route("admin.role.id", $row->id);
+                $url = route("admin.role.id", $row->uuid);
                 $btn = "<button data-url='$url' class='m-1 btn btn-warning btn-sm edit'><i class='fas fa-pen'></i></button> ";
-                $btn .= "<button data-id='$row->id' class='m-1 btn btn-danger btn-sm hapus'><i class='fas fa-trash'></i></button>";
+                $btn .= "<button data-id='$row->uuid' class='m-1 btn btn-danger btn-sm hapus'><i class='fas fa-trash'></i></button>";
                 return $btn;
             })
             ->rawColumns(
@@ -62,10 +62,10 @@ class RoleController extends Controller
 
     private function tambah(Request $request)
     {
+        $request->validate([
+            "role" => ["required"]
+        ]);
         try {
-            if ($request->role == "") {
-                return Response::error("role tidak boleh kosong");
-            }
             $data = $request->except("id", "aksi");
             Role::create($data);
             return Response::success("data berhasil disimpan", 200);
@@ -76,12 +76,12 @@ class RoleController extends Controller
 
     private function update(Request $request)
     {
+        $request->validate([
+            "role" => ["required"]
+        ]);
         try {
-            if ($request->role == "") {
-                return Response::error("role tidak boleh kosong");
-            }
             $data = $request->except("id", "aksi");
-            Role::find($request->id)->update($data);
+            Role::whereUuid($request->id)->update($data);
             return Response::success("data berhasil diubah", 200);
         } catch (Exception $e) {
             return Response::success($e, 500);
@@ -90,8 +90,11 @@ class RoleController extends Controller
 
     private function delete(Request $request)
     {
+        $request->validate([
+            "id" => ["required"]
+        ]);
         try {
-            Role::find($request->id)->delete();
+            Role::whereUuid($request->id)->delete();
             return Response::success("data berhasil dihapus", 200);
         } catch (Exception $e) {
             return Response::success($e, 500);

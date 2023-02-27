@@ -26,6 +26,6 @@ table = $('#table').DataTable({
 @endsection
 
 @section("edit-data")
-$('#id').val(data.id);
+$('#id').val(data.uuid);
 $('#role').val(data.role);
 @endsection
