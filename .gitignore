@@ -10,3 +10,6 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+/assets/images/cover/*
+/assets/images/file/*
+/assets/images/file_demo/*
