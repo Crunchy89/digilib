@@ -16,7 +16,15 @@ class RepositoryController extends Controller
         $subpage = true;
         $menu = "repository";
         $repository = Repository::latest()->limit(6)->get();
-        return view("home.repository", compact("subpage", "menu", "repository"));
+        return view("home.repository.repository", compact("subpage", "menu", "repository"));
+    }
+
+    public function detail(string $slug)
+    {
+        $subpage = true;
+        $menu = "repository";
+        $repository = Repository::whereSlug($slug)->first();
+        return view("home.repository.detail", compact("subpage", "menu", "repository"));
     }
 
     public function getRepository()

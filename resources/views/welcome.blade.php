@@ -2,7 +2,7 @@
 
 @section("meta")
     <meta name="keywords" content="Digilib,perpustakaan stmik lombok,perpustakaan online stmik lombok, digital library stmik lombok,"/>
-    <meta name="description" content="Digital Library STMIK Lombok"/>
+    <meta name="description" content="Digital Library STMIK Lombok, perspustakaan online yang menyediakan list buku, jurnal, dan karya ilmiah di STMIK LOMBOK"/>
     <meta name="author" content="STMIK LOMBOK"/>
     <meta property="og:url" content="{{url('home')}}" />
     <meta property="og:title" content="Digilib" />

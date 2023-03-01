@@ -24,12 +24,15 @@
               {{ substr($data->abstrak, 0, 150)."..." }}
             </p>
           </div>
+          <div>
+            <a href="{{route("home.repository.detail",$data->slug)}}" class="btn btn-info">Baca Selengkapnya</a>
+          </div>
         </div>
         @endforeach
       </div>
       <div>
         <a href="">
-          Baca Selengkapnya
+          Lihat Lebih Banyak
         </a>
       </div>
     </div>
