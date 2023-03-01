@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
 jobs:
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
