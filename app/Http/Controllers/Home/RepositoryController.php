@@ -13,10 +13,10 @@ class RepositoryController extends Controller
     public function index()
     {
         //
-        $data = [
-            "subpage" => true
-        ];
-        return view("home.repository", $data);
+        $subpage = true;
+        $menu = "repository";
+        $repository = Repository::latest()->limit(6);
+        return view("home.repository", compact("subpage", "menu", "repository"));
     }
 
     public function getRepository()

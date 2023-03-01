@@ -11,9 +11,8 @@ class KatalogController extends Controller
     public function index()
     {
         //
-        $data = [
-            "subpage" => true
-        ];
-        return view("home.katalog", $data);
+        $subpage = true;
+        $menu = "katalog";
+        return view("home.katalog", compact("subpage", "menu"));
     }
 }
