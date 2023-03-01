@@ -21,7 +21,7 @@
               {{$data->judul}}
             </h4>
             <p>
-              {{$data->abstrak}}
+              {{ substr($data->abstrak, 0, 150)."..." }}
             </p>
           </div>
         </div>
