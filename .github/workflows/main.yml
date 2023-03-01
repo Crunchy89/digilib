@@ -12,8 +12,8 @@ jobs:
         with:
           fetch-depth: 2
       - name: FTP-Deploy-Action
-        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
-          ftp-server: ${{ secrets.DIGILIB_SERVER }}
-          ftp-username: ${{ secrets.DIGILIB_USERNAME }}
-          ftp-password: ${{ secrets.DIGILIB_PASSWORD }}
+          server: ${{ secrets.DIGILIB_SERVER }}
+          username: ${{ secrets.DIGILIB_USERNAME }}
+          password: ${{ secrets.DIGILIB_PASSWORD }}
