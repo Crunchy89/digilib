@@ -18,6 +18,7 @@ class CreateRepositoriesTable extends Migration
             $table->string("uuid")->unique();
             $table->string("nim")->unique();
             $table->string("judul")->unique();
+            $table->text("abstrak");
             $table->string("cover")->comment("cover skripsi");
             $table->string("file")->comment("file skripsi berbentuk pdf");
             $table->string("file_demo")->comment("file skripsi untuk demo");

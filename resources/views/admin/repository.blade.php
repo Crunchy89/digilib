@@ -15,6 +15,10 @@
         <input type="text" name="judul" id="judul" class="form-control">
     </div>
     <div class="form-group">
+        <label for="abstrak">Abstrak</label>
+        <textarea class="form-control" name="abstrak" id="abstrak" rows="3"></textarea>
+    </div>
+    <div class="form-group">
         <label for="cover">Cover Skripsi</label>
         <input type="file" name="cover" id="cover" class="form-control" accept="image/*">
     </div>
@@ -37,6 +41,7 @@ table = $('#table').DataTable({
         {data: 'DT_RowIndex', name: 'DT_RowIndex',orderable: false, searchable: false},
         {data: 'nim', name: 'nim',orderable: true, searchable: true},
         {data: 'judul', name: 'judul',orderable: true, searchable: true},
+        {data: 'abstrak', name: 'abstrak',orderable: true, searchable: true},
         {data: 'cover', name: 'cover',orderable: false, searchable: false},
         {data: 'file', name: 'file',orderable: false, searchable: false},
         {data: 'file_demo', name: 'file_demo',orderable: false, searchable: false},
@@ -50,4 +55,5 @@ $('#id').val(data.uuid);
 $('#nim').attr("disabled",true);
 $('#nim').val(data.nim);
 $('#judul').val(data.judul);
+$('#abstrak').html(data.abstrak);
 @endsection

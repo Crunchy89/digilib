@@ -21,8 +21,7 @@
               {{$data->judul}}
             </h4>
             <p>
-              have suffered alteration in some form, by injected humour, or randomised words which don&#39;t look even
-              slightly believable. If you are
+              {{$data->abstrak}}
             </p>
           </div>
         </div>
@@ -35,4 +34,12 @@
       </div>
     </div>
   </section>
+  @endsection
+
+  @section("script")
+    <script>
+        $(document).ready(function(){
+
+        })
+    </script>
   @endsection

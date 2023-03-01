@@ -12,7 +12,7 @@ class Repository extends Model
     protected $table = "repository";
 
     protected $fillable = [
-        "nim", "judul", "cover", "file", "file_demo"
+        "nim", "judul", "cover", "file", "file_demo", "abstrak"
     ];
 
     protected static function boot()

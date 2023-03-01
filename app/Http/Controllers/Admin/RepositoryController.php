@@ -18,7 +18,7 @@ class RepositoryController extends Controller
         $title = "repository";
         $url = route("admin.repository.datatable");
         $aksi = route("admin.repository.aksi");
-        $th = ["No", "NIM", "Judul", "Cover", "File", "File Demo", "Aksi"];
+        $th = ["No", "NIM", "Judul", "Abstrak", "Cover", "File", "File Demo", "Aksi"];
         return view("admin.repository", compact("active", "title", "url", "aksi", "th"));
     }
 
@@ -42,6 +42,11 @@ class RepositoryController extends Controller
                 // $btn .= "<button data-id='$row->uuid' class='m-1 btn btn-danger btn-sm hapus'><i class='fas fa-trash'></i></button>";
                 return $btn;
             })
+            ->addColumn("abstrak", function ($row) {
+                $data = substr($row->abstrak, 0, 100);
+                $data .= "...";
+                return $data;
+            })
             ->addColumn("cover", function ($row) {
                 $src = asset($row->cover);
                 $cover = "<a href='$src' target='_blank'>view file</a>";
@@ -58,7 +63,7 @@ class RepositoryController extends Controller
                 return $cover;
             })
             ->rawColumns(
-                ['action', 'cover', 'file', 'file_demo']
+                ['action', "abstrak", 'cover', 'file', 'file_demo']
             )->make(true);
     }
 
@@ -80,6 +85,7 @@ class RepositoryController extends Controller
     {
         $request->validate([
             "judul" => ["required"],
+            "abstrak" => ["required"],
             "cover" => ["required"],
             "file" => ["required"],
             "file_demo" => ["required"]
@@ -88,6 +94,7 @@ class RepositoryController extends Controller
             $data = [
                 "nim" => $request->nim,
                 "judul" => $request->judul,
+                "abstrak" => $request->abstrak,
                 "cover" => Files::move($request->file("cover"), "assets/images/cover"),
                 "file" => Files::move($request->file("file"), "assets/images/file"),
                 "file_demo" => Files::move($request->file("file_demo"), "assets/images/file_demo"),
@@ -103,9 +110,11 @@ class RepositoryController extends Controller
     {
         $request->validate([
             "judul" => ["required"],
+            "abstrak" => ["required"],
         ]);
         try {
             $data["judul"] = $request->judul;
+            $data["abstrak"] = $request->abstrak;
             $singleData = Repository::select("cover", "file", "file_demo")->whereUuid($request->id)->first();
             if ($request->hasfile("cover")) {
                 $data["cover"] = Files::move($request->file("cover"), "assets/images/cover");
