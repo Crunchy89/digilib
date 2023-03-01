@@ -20,19 +20,19 @@
           {{$repository->judul}}
         </h2>
       </div>
+      <h4>Abstrak</h4>
       <div class="row">
         <div class="col-sm-12 col-md-4 col-lg-2 d-flex flex-column justify-content-center justify-items-center" >
             <img class="w-100" src="{{asset($repository->cover)}}" alt="cover">
         </div>
         <div class="col-sm-12 col-md-8 col-lg-10">
             <div class="service_container layout_padding2">
-              <h4>Abstrak</h4>
-              <p>{{$repository->abstrak}}</p>
+                <p>{{$repository->abstrak}}</p>
             </div>
         </div>
-      </div>
     </div>
-  </section>
+</div>
+</section>
   @endsection
 
   @section("script")
