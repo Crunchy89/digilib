@@ -27,9 +27,12 @@ class RepositoryController extends Controller
         return view("home.repository.detail", compact("subpage", "menu", "repository"));
     }
 
-    public function getRepository()
+    public function getRepository(Request $request)
     {
-        $repo = Repository::all();
+        $page = $request->search;
+        $page = $request->page;
+        $repo = Repository::latest()->skip($page * 6)->take(6)->get();
+        dd($repo);
         return Response::success($repo);
     }
 }

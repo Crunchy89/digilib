@@ -10,6 +10,14 @@
           Repository STMIK Lombok
         </h2>
       </div>
+      <div class="form-group">
+        <div class="input-group mt-3 mb-3">
+            <input type="text" class="form-control" placeholder="Cari" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-success" id="basic-addon2">Cari</button>
+            </div>
+          </div>
+      </div>
       <div class="service_container layout_padding2">
         @foreach ($repository as $data)
         <div class="service_box">
@@ -42,7 +50,6 @@
   @section("script")
     <script>
         $(document).ready(function(){
-
         })
     </script>
   @endsection

@@ -16,8 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', "HomeController@index")->name("home");
 Route::get('/about', "Home\AboutController@index")->name("home.about");
 Route::get('/katalog', "Home\KatalogController@index")->name("home.katalog");
-Route::get('/repository', "Home\RepositoryController@index")->name("home.repository");
-Route::get('/repository/detail/{slug}', "Home\RepositoryController@detail")->name("home.repository.detail");
+Route::prefix("repository")->group(function () {
+    Route::get('/', "Home\RepositoryController@index")->name("home.repository");
+    Route::get('/detail/{slug}', "Home\RepositoryController@detail")->name("home.repository.detail");
+    Route::post('/get-repo', "Home\RepositoryController@getRepository")->name("home.repository.getrepo");
+});
 Route::prefix('admin')->group(function () {
     Route::get("/", "Admin\DashboardController@index")->name("admin.dashboard");
     Route::prefix('role')->group(function () {
