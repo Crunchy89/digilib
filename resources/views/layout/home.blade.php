@@ -57,13 +57,19 @@
                       <li class="nav-item @if($menu === "katalog")active @endif">
                         <a class="nav-link" href="{{route("home.katalog")}}">Katalog</a>
                       </li>
+                      @if (Auth::check())
                       <li class="nav-item">
-                        <a class="nav-link" href="#"> Masuk</a>
+                        <a class="nav-link" href="{{route("admin.dashboard")}}">Admin</a>
                       </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{{route("logout")}}">Logout</a>
+                      </li>
+                      @else
+                      <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#login"> Masuk</a>
+                      </li>
+                      @endif
                     </ul>
-                    <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
-                      <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
-                    </form>
                   </div>
                 </div>
               </nav>
@@ -72,6 +78,36 @@
         </div>
       </header>
       <!-- end header section -->
+      <!-- Modal -->
+<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Masuk</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form action="{{route("login")}}" method="post">
+            {{ csrf_field() }}
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" placeholder="Username" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Password" class="form-control">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                <button type="submit" class="btn btn-primary">Masuk</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
       @yield("slider")
     </div>
     @yield("body")
