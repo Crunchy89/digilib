@@ -15,8 +15,8 @@ class RepositoryController extends Controller
         //
         $subpage = true;
         $menu = "repository";
-        $repository = Repository::latest()->limit(6)->get();
-        return view("home.repository.repository", compact("subpage", "menu", "repository"));
+        // $repository = Repository::latest()->limit(6)->get();
+        return view("home.repository.repository", compact("subpage", "menu"));
     }
 
     public function detail(string $slug)
@@ -29,10 +29,21 @@ class RepositoryController extends Controller
 
     public function getRepository(Request $request)
     {
-        $page = $request->search;
-        $page = $request->page;
-        $repo = Repository::latest()->skip($page * 6)->take(6)->get();
-        dd($repo);
-        return Response::success($repo);
+        // $page = $request->search;
+        $page = $request->get("page");
+        if ($page < 1) {
+            $page = 1;
+        }
+        $repo = Repository::select("judul", "cover", "abstrak", "slug")->latest()->skip($page * 6 - 6)->take(6)->get();
+        $data = [];
+        foreach ($repo as $temp) {
+            $test = [];
+            $test["judul"] = $temp->judul;
+            $test["cover"] = asset($temp->cover);
+            $test["abstrak"] = $temp->abstrak;
+            $test["url"] = route("home.repository.detail", $temp->slug);
+            $data[] = $test;
+        }
+        return Response::success($data);
     }
 }

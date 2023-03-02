@@ -19,7 +19,7 @@ Route::get('/katalog', "Home\KatalogController@index")->name("home.katalog");
 Route::prefix("repository")->group(function () {
     Route::get('/', "Home\RepositoryController@index")->name("home.repository");
     Route::get('/detail/{slug}', "Home\RepositoryController@detail")->name("home.repository.detail");
-    Route::post('/get-repo', "Home\RepositoryController@getRepository")->name("home.repository.getrepo");
+    Route::get('/get-repo', "Home\RepositoryController@getRepository")->name("home.repository.getrepo");
 });
 Route::prefix('admin')->group(function () {
     Route::get("/", "Admin\DashboardController@index")->name("admin.dashboard");
