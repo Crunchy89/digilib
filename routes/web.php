@@ -23,7 +23,7 @@ Route::prefix("repository")->group(function () {
     Route::get('/detail/{slug}', "Home\RepositoryController@detail")->name("home.repository.detail");
     Route::get('/get-repo', "Home\RepositoryController@getRepository")->name("home.repository.getrepo");
 });
-Route::prefix('admin')->group(function () {
+Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::get("/", "Admin\DashboardController@index")->name("admin.dashboard");
     Route::prefix('role')->group(function () {
         Route::get("/", "Admin\RoleController@index")->name("admin.role");
