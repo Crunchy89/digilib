@@ -15,23 +15,30 @@
 @section("body")
 <section class="service_section">
     <div class="container">
-      <div class="custom_heading-container">
+        <div class="custom_heading-container">
         <h2>
           {{$repository->judul}}
         </h2>
-      </div>
-      <h4>Abstrak</h4>
-      <div class="row">
-        <div class="col-sm-12 col-md-4 col-lg-2 d-flex flex-column justify-content-center justify-items-center" >
-            <img class="w-100" src="{{asset($repository->cover)}}" alt="cover">
         </div>
-        <div class="col-sm-12 col-md-8 col-lg-10">
+        <h4>Abstrak</h4>
+        <div class="row">
+            <div class="col-sm-12 col-md-4 col-lg-2 d-flex flex-column justify-content-center justify-items-center" >
+            <img class="w-100" src="{{asset($repository->cover)}}" alt="cover">
+            </div>
+            <div class="col-sm-12 col-md-8 col-lg-10">
             <div class="service_container layout_padding2">
                 <p>{{$repository->abstrak}}</p>
             </div>
+            </div>
+        </div>
+        <div>
+            @if (Auth::check())
+            <a href="{{asset($repository->file)}}">baca skripsi</a>
+            @else
+            <a href="{{asset($repository->file_demo)}}">baca skripsi</a>
+            @endif
         </div>
     </div>
-</div>
 </section>
   @endsection
 
