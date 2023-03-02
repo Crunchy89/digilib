@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Helper\Response;
 use App\Http\Controllers\Controller;
 use App\Model\Role;
-use App\Model\User;
+use App\User;
 use Exception;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
