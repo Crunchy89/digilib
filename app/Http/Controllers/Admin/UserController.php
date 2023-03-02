@@ -27,7 +27,7 @@ class UserController extends Controller
     public function getById(string $uuid)
     {
         try {
-            $role = User::where("uuid", $uuid)->first();
+            $role = User::whereUuid($uuid)->first();
             return Response::success($role, 200);
         } catch (Exception $e) {
             return Response::error("data tidak ditemukan", 404);
